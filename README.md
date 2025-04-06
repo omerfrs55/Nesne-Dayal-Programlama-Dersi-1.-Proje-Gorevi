@@ -50,8 +50,7 @@ Her listeleme işlemi için for döngüsü kullandım.
 Scanner nesnesi program sonunda bir kez kapattım. Çünkü her işlem sonunda ayrı ayrı kapatmam gerekcekti bu sayede gerek kalmadı.
 Programım, kullanıcı 0 seçeneğini girene kadar sürekli olarak çalışmaya devam ediyor.
 
-**Bazı Notlarım:**<br/>
-- Tüm veriler dizilerle tutulmuştur.
+**Not:**<br/>
 - Maksimum sınırlar: 10 film, 20 müşteri, 100 bilet.
 
 
