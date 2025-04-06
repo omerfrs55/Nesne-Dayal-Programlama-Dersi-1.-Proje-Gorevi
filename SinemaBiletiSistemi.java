@@ -5,38 +5,38 @@ public class SinemaBiletiSistemi {
         Scanner giris = new Scanner(System.in);
 
         String[] filimler = new String[10]; // En fazla 10 film girebiliriz
-        int filmSayisi = 0; // Girilen film sayısını tutuyoruz
+        int filmsayisi = 0; // Girilen film sayısını tutuyoruz
 
         String[] musteriler = new String[20]; // En fazla 20 müşteri girebiliriz
         String[] emailler = new String[20];   // Müşterilerin e-posta adreslerini tutuyoruz
-        int musteriSayisi = 0; // Girilen müşteri sayısını tutuyoruz
+        int musterisayisi = 0; // Girilen müşteri sayısını tutuyoruz
 
-        String[] biletfilimler = new String[100]; // Biletlerdeki filmlerin adlarını tutuyoruz
-        String[] biletMusteriler = new String[100]; // Biletlerdeki müşterilerin bilgilerini tutuyoruz
-        int biletSayisi = 0; // Bilet sayısını tutuyoruz
+        String[] filimleradi = new String[100]; // Biletlerdeki filmlerin adlarını tutuyoruz
+        String[] musteribilgi = new String[100]; // Biletlerdeki müşterilerin bilgilerini tutuyoruz
+        int biletsayisi = 0; // Bilet sayısını tutuyoruz
 
         int secim; // Menüden yapacağımız seçimi tuttuk
 
         do {
-            System.out.println("\n--- Sinema Bilet Sistemi ---");
-            System.out.println("1 - Film Ekle");
-            System.out.println("2 - Müşteri Ekle");
-            System.out.println("3 - Bilet Kaydı Oluştur");
-            System.out.println("4 - Filmleri Listele");
-            System.out.println("5 - Müşterileri Listele");
-            System.out.println("6 - Biletleri Listele");
-            System.out.println("0 - Çıkış");
+            System.out.println("\n----- Sinema Bilet Sistemi -----");
+            System.out.println("1 -- Film Ekle");
+            System.out.println("2 -- Müşteri Ekle");
+            System.out.println("3 -- Bilet Kaydı Oluştur");
+            System.out.println("4 -- Filmleri Listele");
+            System.out.println("5 -- Müşterileri Listele");
+            System.out.println("6 -- Biletleri Listele");
+            System.out.println("0 -- Sistemden Çıkış");
             System.out.print("Seçim yapınız: ");
             secim = giris.nextInt();
-            giris.nextLine(); // Kullanıcı 3 yazıp Enter’a bastığında aslında: 3\n girer. Yani sayıdan sonra Enter tuşu yani yeni satır da geliyor. Ama nextInt() sadece sayıyı alıp, Enter’ı bırakıyo.
+            giris.nextLine(); // Kullanıcı 3 yazıp Enter’a bastığında aslında: 3\n girer. Yani sayıdan sonra Enter tuşu yani yeni satır da geliyor. Ama nextInt() sadece sayıyı alıp, Enter’ı bırakıyor.
 
             System.out.println(); // Menümüz ile işlem çıktımız arasında boşluk bırakmak için
 
             if (secim == 1) {
-                if (filmSayisi < 10) {
+                if (filmsayisi < 10) {
                     System.out.print("Film adı: ");
-                    filimler[filmSayisi] = giris.nextLine(); // Film adını alıyoruz
-                    filmSayisi++; // Film sayısını arttırıyoruz
+                    filimler[filmsayisi] = giris.nextLine(); // Film adını alıyoruz
+                    filmsayisi++; // Film sayısını arttırıyoruz
                     System.out.println("Film eklendi.");
                 } else {
                     System.out.println("Film sınırına ulaşıldı (maksimum 10).");
@@ -44,12 +44,12 @@ public class SinemaBiletiSistemi {
             }
 
             else if (secim == 2) {
-                if (musteriSayisi < 20) {
+                if (musterisayisi < 20) {
                     System.out.print("Müşteri adı: ");
-                    musteriler[musteriSayisi] = giris.nextLine(); // Müşteri adını alıyoruz
+                    musteriler[musterisayisi] = giris.nextLine(); // Müşteri adını alıyoruz
                     System.out.print("E-posta: ");
-                    emailler[musteriSayisi] = giris.nextLine(); // E-postasını alıyoruz
-                    musteriSayisi++; // Müşteri sayısını arttırıyoruz
+                    emailler[musterisayisi] = giris.nextLine(); // E-postasını alıyoruz
+                    musterisayisi++; // Müşteri sayısını arttırıyoruz
                     System.out.println("Müşteri eklendi.");
                 } else {
                     System.out.println("Müşteri sınırına ulaşıldı (maksimum 20).");
@@ -58,35 +58,35 @@ public class SinemaBiletiSistemi {
 
             else if (secim == 3) {
                 // Bilet Kaydı Oluşturma Kısmımız:
-                if (filmSayisi == 0 || musteriSayisi == 0) {
+                if (filmsayisi == 0 || musterisayisi == 0) {
                     System.out.println("Önce film ve müşteri eklemelisiniz.");
                 } else {
                     // Mevcut filmlerimizi listeleyebilmemiz için:
-                    System.out.println("--- Mevcut filimler ---");
-                    for (int i = 0; i < filmSayisi; i++) {
+                    System.out.println("---- Mevcut filimler ----");
+                    for (int i = 0; i < filmsayisi; i++) {
                         System.out.println(i + " - " + filimler[i]);
                     }
 
                     System.out.print("Film numarası: ");
-                    int filmNo = giris.nextInt(); // Seçilen film numaramız
+                    int filimnumara = giris.nextInt(); // Seçilen film numaramız
                     giris.nextLine(); // Enter temizliği için
 
-                    if (filmNo >= 0 && filmNo < filmSayisi) {
+                    if (filimnumara >= 0 && filimnumara < filmsayisi) {
                         // Müşterilerimizi listeleyebilmemiz için:
-                        System.out.println("--- Müşteriler ---");
-                        for (int i = 0; i < musteriSayisi; i++) {
-                            System.out.println(i + " - " + musteriler[i] + " | " + emailler[i]);
+                        System.out.println("---- Müşteriler ----");
+                        for (int i = 0; i < musterisayisi; i++) {
+                            System.out.println(i + " - Müşteri: " + musteriler[i] + " | Müşteri Email'i: " + emailler[i]);
                         }
 
                         System.out.print("Müşteri numarası: ");
-                        int musteriNo = giris.nextInt(); // Seçilen müşteri numaramız
+                        int musterinumara = giris.nextInt(); // Seçilen müşteri numaramız
                         giris.nextLine();
 
-                        if (musteriNo >= 0 && musteriNo < musteriSayisi) {
+                        if (musterinumara >= 0 && musterinumara < musterisayisi) {
                             // Bilet bilgilerini kaydedebilmek için:
-                            biletfilimler[biletSayisi] = filimler[filmNo]; // Filmin adı
-                            biletMusteriler[biletSayisi] = musteriler[musteriNo] + " (" + emailler[musteriNo] + ")"; // Müşterinin bilgisi
-                            biletSayisi++; // Bilet sayısını arttırıyoruz
+                            filimleradi[biletsayisi] = filimler[filimnumara]; // Filmin adı
+                            musteribilgi[biletsayisi] = musteriler[musterinumara] + " (" + emailler[musterinumara] + ")"; // Müşterinin bilgisi
+                            biletsayisi++; // Bilet sayısını arttırıyoruz
                             System.out.println("Bilet başarıyla kaydedildi.");
                         } else {
                             System.out.println("Geçersiz müşteri numarası.");
@@ -99,11 +99,11 @@ public class SinemaBiletiSistemi {
 
             else if (secim == 4) {
                 // Filmlerimizi Listeleyebilmek için:
-                if (filmSayisi == 0) {
+                if (filmsayisi == 0) {
                     System.out.println("Henüz film eklenmedi.");
                 } else {
-                    System.out.println("--- Mevcut filimler ---");
-                    for (int i = 0; i < filmSayisi; i++) {
+                    System.out.println("---- Mevcut filimler ----");
+                    for (int i = 0; i < filmsayisi; i++) {
                         System.out.println((i + 1) + ". " + filimler[i]);
                     }
                 }
@@ -111,24 +111,24 @@ public class SinemaBiletiSistemi {
 
             else if (secim == 5) {
                 // Müşterilerimizi Listeleyebilmek için:
-                if (musteriSayisi == 0) {
+                if (musterisayisi == 0) {
                     System.out.println("Henüz müşteri eklenmedi.");
                 } else {
-                    System.out.println("--- Kayıtlı Müşteriler ---");
-                    for (int i = 0; i < musteriSayisi; i++) {
-                        System.out.println((i + 1) + ". " + musteriler[i] + " | " + emailler[i]);
+                    System.out.println("---- Kayıtlı Müşteriler ----");
+                    for (int i = 0; i < musterisayisi; i++) {
+                        System.out.println((i + 1) + ". Müşteri: " + musteriler[i] + " | Müşteri Email'i: " + emailler[i]);
                     }
                 }
             }
 
             else if (secim == 6) {
                 // Biletleri Listeleyebilmek için:
-                if (biletSayisi == 0) {
+                if (biletsayisi == 0) {
                     System.out.println("Henüz bilet kaydı yok.");
                 } else {
-                    System.out.println("--- Satılan Biletler ---");
-                    for (int i = 0; i < biletSayisi; i++) {
-                        System.out.println((i + 1) + ". " + biletMusteriler[i] + " -> " + biletfilimler[i]);
+                    System.out.println("---- Satılan Biletler ----");
+                    for (int i = 0; i < biletsayisi; i++) {
+                        System.out.println((i + 1) + ". " + musteribilgi[i] + " -> " + filimleradi[i]);
                     }
                 }
             }
