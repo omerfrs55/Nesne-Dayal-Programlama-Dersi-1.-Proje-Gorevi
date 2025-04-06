@@ -28,7 +28,7 @@ public class SinemaBiletiSistemi {
             System.out.println("0 - Çıkış");
             System.out.print("Seçim yapınız: ");
             secim = giris.nextInt();
-            giris.nextLine(); // Kullanıcı 3 yazıp Enter’a bastığında aslında: 3\n girer. Yani sayıdan sonra Enter tuşu (yeni satır) da geliyor. Ama nextInt() sadece sayıyı alıp, Enter’ı bırakıyor.
+            giris.nextLine(); // Kullanıcı 3 yazıp Enter’a bastığında aslında: 3\n girer. Yani sayıdan sonra Enter tuşu yani yeni satır da geliyor. Ama nextInt() sadece sayıyı alıp, Enter’ı bırakıyo.
 
             System.out.println(); // Menümüz ile işlem çıktımız arasında boşluk bırakmak için
 
