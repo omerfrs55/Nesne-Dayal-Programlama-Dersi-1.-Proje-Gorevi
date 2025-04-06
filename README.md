@@ -38,7 +38,7 @@ Müşteri adını ve e-postasını kullanıcıdan aldım.
 Bunları `musteriler[]` ve `emailler[]` dizilerine ayrı ayrı ekledim.
 
 **Bilet Kaydı Oluşturma:**<br/>
-Önce film ve müşteri olup olmadığı kontrol ediyoruz.
+Önce film ve müşteri olup olmadığı kontrol ettiriyoruz.
 Sonra kullanıcıdan film ve müşteri seçmesi istedim.
 Ve ardından seçilen film ve müşteri bilgilerini `biletFilimler[]` ve `biletMusteriler[]` dizilerine kaydettim
 
