@@ -52,6 +52,7 @@ Programım, kullanıcı 0 seçeneğini girene kadar sürekli olarak çalışmaya
 
 **Not:**<br/>
 - Maksimum sınırlar: 10 film, 20 müşteri, 100 bilet.
+- 4, 5 ve 6. seçenekleri kullandığımızda "Terminal" içinde Sinema Bileti Sistemi üst kısmında çıktımızı belirttim. İşleme devam etmek için tekrardan arayüz gelince bu seçenekler üstte kalıcak(gözükmeme ihtimaline karşı terminal kısmını büyütünüz.).
 
 
 ## **Kodun Sahibi ve Proje Hakkında Bilgi:**<br/>
