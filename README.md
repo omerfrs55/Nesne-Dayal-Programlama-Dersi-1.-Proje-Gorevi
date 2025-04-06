@@ -16,9 +16,9 @@ Bu konsol uygulamasında bir sinema işletmesi için temel müşteri kaydı ve b
 **String dizileri kullanılarak;**
 Filmler (`filimler[]`),
 Müşteriler (`musteriler[]` ve `emailler[]`),
-Biletler (`biletFilimler[]` ve `biletMusteriler[]`)i ayrı ayrı sakladım.
+Biletler (`filimleradi[]` ve `musteribilgi[]`)i ayrı ayrı sakladım.
 
-- Her kategori için ayrı ayrı sayaç değişkenlerini (filmSayisi, musteriSayisi, biletSayisi) oluşturup, dizilerin hangi indeksinde veri olduğu takip ettirdim.
+- Her kategori için ayrı ayrı sayaç değişkenlerini (filmsayisi, musteriSayisi, biletSayisi) oluşturup, dizilerin hangi indeksinde veri olduğu takip ettirdim.
 
 - Programda kullanıcıyla etkileşim kurabilmek adına Scanner sınıfını kullandım.
 
@@ -40,7 +40,7 @@ Bunları `musteriler[]` ve `emailler[]` dizilerine ayrı ayrı ekledim.
 **Bilet Kaydı Oluşturma:**<br/>
 Önce film ve müşteri olup olmadığı kontrol ettiriyoruz.
 Sonra kullanıcıdan film ve müşteri seçmesi istedim.
-Ve ardından seçilen film ve müşteri bilgilerini `biletFilimler[]` ve `biletMusteriler[]` dizilerine kaydettim
+Ve ardından seçilen film ve müşteri bilgilerini `filimleradi[]` ve `musteribilgi[]` dizilerine kaydettim
 
 **Veri Listeleme:**<br/>
 Filmler, müşteriler ve biletler ayrı ayrı listeleledim.
